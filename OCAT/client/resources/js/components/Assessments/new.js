@@ -22,26 +22,42 @@ export function AssessmentNew() {
     <input name='Risha' /> */}
 
     <div className="form-control">
-      <label>First Name</label><br/>
+      <label>Enter Instrument Name</label><br/>
       <input type="text" name="first_name" ref={register} />
     </div>
 
     <div className="form-control">
-      <label>Last Name</label><br/>
+      <label>Enter Cat Name</label><br/>
       <input type="text" name="last_name" ref={register} />
     </div>
 
     <div className="form-control">
-      <label>Date of Birth</label>
+      <label>Cat Date of Birth</label>
       <DatePicker selected={date} onChange={handleChange} />
     </div>
 
+    <div className="form-control">
+      <label>Previous contact with the Cat Judicial System</label><br/>
+      <input type="text" name="last_name" ref={register} />
+    </div>
 
-    <select name="gender" ref={register}>
+
+    <div className="form-control">
+      <label>Physical altercations with other cats</label><br/>
+      <input type="text" name="last_name" ref={register} />
+    </div>
+
+    <div className="form-control">
+      <label>Physical altercations with owner (scratching, biting, etc...)</label><br/>
+      <input type="text" name="last_name" ref={register} />
+    </div>
+
+
+    {/* <select name="gender" ref={register}>
       <option value="female">female</option>
       <option value="male">male</option>
       <option value="other">other</option>
-    </select>
+    </select> */}
     <button type="submit">Submit</button>
 
   </form>
