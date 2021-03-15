@@ -2,6 +2,7 @@ let request = require(`request`);
 const config = require(`../Config`);
 
 exports.submit = ( assessment ) => {
+  alert('check')
     return new Promise((resolve, reject) => {
   
     //supply the correct uri and method here

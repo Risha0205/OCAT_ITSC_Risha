@@ -58,8 +58,8 @@ export function AssessmentNew() {
       <option value="male">male</option>
       <option value="other">other</option>
     </select> */}
-    <button type="submit">Submit</button>
-
+    <button type="submit"   onClick={() => onSubmit('j')}>Submit</button>
+  
   </form>
   );
 }
