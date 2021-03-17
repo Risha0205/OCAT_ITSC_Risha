@@ -1,11 +1,13 @@
 const router = require(`express`).Router();
 const { AssessmentService } = require(`../../libs`);
 const { ErrorHandler } = require(`../../utils`);
-import { submit } from '../../../server/libs/AssessmentService';
 
 router.post(`/submit`, (req, res) => {
     //call the AssessmentSubmit function from the server/libs/AssessmentService
-    await AssessmentService.submit(data);
+    console.log('helkhjkjloriyuuuuu')
+    console.log('req', req.body);
+  //  console.log('res',res)
+     AssessmentService.submit(req.body);
 });
 
 exports.router = router;

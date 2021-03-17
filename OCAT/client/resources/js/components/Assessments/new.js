@@ -16,7 +16,7 @@ export function AssessmentNew() {
   const handleChange = date => setDate(date);
 
   return (
-    <form style={{ backgroundColor: 'transparent', height: 200, flexdirection: 'column' }}>
+    <form onSubmit={handleSubmit(onSubmit)} style={{ backgroundColor: 'transparent', height: 200, flexdirection: 'column' }}>
 
     {/* <label style={spanStyles}>First Name</label>
     <input name='Risha' /> */}
@@ -58,7 +58,7 @@ export function AssessmentNew() {
       <option value="male">male</option>
       <option value="other">other</option>
     </select> */}
-    <button type="submit"   onClick={() => onSubmit('j')}>Submit</button>
+    <input type="submit"></input>
   
   </form>
   );

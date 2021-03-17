@@ -2,18 +2,16 @@ import axios from "axios";
 
 export class AssessmentService {
     static async submit (assessment) {
+        const obj ={
+            "Firstname" : "risha"
+        }
+      //  console.log(axios.post('http://localhost:4567/assessment/submit',assessment))
         try {
-            //Choose the correct method, url, and data to send in a request to the express OCAT/server/routes
-            await axios({
-                method: 'post',
-                url: '/login',
-
-                data: {
-                  firstName: 'Risha',
-                  lastName: 'Choubey'
-                }
-              });
-
+    
+            await axios.post('http://localhost:4567/api/assessment/submit',obj) .then(res => {
+                console.log(res)
+              })
+            
             return;
             
         }
