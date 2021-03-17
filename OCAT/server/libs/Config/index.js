@@ -14,7 +14,7 @@ try {
       port: process.env.PORT || 4567,
     },
     api: {
-      url: process.env.API_URL || `localhost:3000`, // required
+      url: process.env.API_URL ||`http://localhost:3000`, // required
       appId: process.env.API_APP_ID || `` //required
     },
     reassessment_period_limit: 365
