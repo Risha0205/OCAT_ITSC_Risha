@@ -12,6 +12,7 @@ export function AssessmentList() {
     useEffect(function fetch() {
         (async function () {
             const resData = await AssessmentService.retrieveAll();
+            console.log('resdta==>', resData)
             const columnedData = []
             resData.data.forEach(assessment => {
 
