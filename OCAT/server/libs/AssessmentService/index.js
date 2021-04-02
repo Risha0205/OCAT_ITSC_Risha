@@ -26,3 +26,29 @@ exports.submit = ( assessment ) => {
       });
     });
   };
+
+  exports.retrieve = (  ) => {
+    return new Promise((resolve, reject) => {
+  
+      //supply the correct uri and method here
+      const options = {
+          uri: `${config.api.url}/assessment/retrieve/`,
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          json: true
+      };
+  
+      //this function sends a request to the API
+      // finish the logic to handle the response when returned from the API
+      request(options, (error, response) => {
+        if(error == null){
+          resolve(response);
+        }
+        if(error != null){
+          reject(error);
+        }
+      });
+    });
+  }

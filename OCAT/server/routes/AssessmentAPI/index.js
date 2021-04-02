@@ -1,4 +1,5 @@
 const router = require(`express`).Router();
+const { resolve } = require("app-root-path");
 const { AssessmentService } = require(`../../libs`);
 const { ErrorHandler } = require(`../../utils`);
 
@@ -10,5 +11,17 @@ router.post(`/submit`, (req, res) => {
      AssessmentService.submit(req.body);
 });
 
+router.get(`/retrieve`, (req, res) => {
+  console.log('retrieve==>',req)
+  AssessmentService.retrieve().then((response) => {
+    console.log('retData--->',response.body.data)
+       res.send(response.body.data)        
+    });
+});
+
+
 exports.router = router;
 exports.path = `/api/assessment`;
+
+
+

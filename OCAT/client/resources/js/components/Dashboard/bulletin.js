@@ -17,7 +17,7 @@ export class DashboardBulletin extends React.Component {
             <div>
               <h1 >OCAT Dashboard</h1>
               <NavLink to="/assessment/new">New</NavLink>
-              {/* <button href="/assessment/list">List</button> */}
+              <NavLink to="/assessment/list">List</NavLink>
               <hr />
             </div>
         </>

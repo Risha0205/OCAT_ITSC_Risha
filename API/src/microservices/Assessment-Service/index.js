@@ -23,3 +23,24 @@ exports.submit = (assessment, value, riskLevel) => {
     }
   });
 };
+
+exports.retrieve = () => {
+  return new Promise(async (resolve, reject) => { 
+    try {
+      let assesmentList = await new Assessments().where({deleted_at: null}).fetchAll().catch(function (e) {
+        console.log('error in retrieving assessments')
+        resolve(assesmentList.toJSON());
+      });
+
+      resolve(assesmentList.toJSON());
+
+    } catch (err) {
+      console.log('errrorrrr==>', err)
+      reject();
+    }
+  });
+};
+
+
+
+  
