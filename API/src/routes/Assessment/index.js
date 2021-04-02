@@ -41,13 +41,11 @@ module.exports = server => {
           next
         );
       } catch (err) {
-        // console.log(err)
+    
         next(err);
       }
     }
   );
-
-
 };
 
 

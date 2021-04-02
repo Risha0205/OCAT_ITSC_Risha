@@ -3,9 +3,8 @@ import axios from "axios";
 export class AssessmentService {
     static async submit (assessment) {
         const obj ={
-            "Firstname" : "risha"
+            "Firstname" : "risha"  
         }
-      //  console.log(axios.post('http://localhost:4567/assessment/submit',assessment))
         try {
     
             await axios.post('http://localhost:4567/api/assessment/submit',obj) .then(res => {
@@ -19,7 +18,6 @@ export class AssessmentService {
             throw new Error(`${err.response.statusText} - ${err.response.data.message}`);
         }
     }
-
 
 
 
