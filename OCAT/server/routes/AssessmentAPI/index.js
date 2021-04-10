@@ -19,6 +19,13 @@ router.get(`/retrieve`, (req, res) => {
     });
 });
 
+router.post(`/delete`, (req, res) => {
+  console.log('delet--->',req.body)
+  AssessmentService.delete(req.body).then((response) => {
+    res.send(response.body)        
+  });;
+
+});
 
 exports.router = router;
 exports.path = `/api/assessment`;

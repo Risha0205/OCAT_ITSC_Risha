@@ -52,3 +52,31 @@ exports.submit = ( assessment ) => {
       });
     });
   }
+
+
+  exports.delete = ( assessmentId) => {
+    return new Promise((resolve, reject) => {
+      //supply the correct uri and method here
+      const options = {
+          uri: `${config.api.url}/assessment/delete/`,
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: {
+            assessmentId: assessmentId
+          },
+          json: true
+      };
+      //this function sends a request to the API
+      // finish the logic to handle the response when returned from the API
+      request(options, (error, response) => {
+        if(error == null){
+          resolve(response);
+        }
+        if(error != null){
+          reject(error);
+        }
+      });
+    });
+  };

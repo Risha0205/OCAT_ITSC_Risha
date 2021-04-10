@@ -7,7 +7,7 @@ export class AssessmentService {
         }
         try {
     
-            await axios.post('http://localhost:4567/api/assessment/submit',obj) .then(res => {
+            await axios.post('http://localhost:4567/api/assessment/submit',assessment) .then(res => {
                 console.log(res)
               })
             
@@ -30,5 +30,17 @@ export class AssessmentService {
             throw new Error(`${err.response.statusText} - ${err.response.data.message}`);
         }
     }
+
+    static async deleteAssessment(id) {
+        try {
+            await axios.post('http://localhost:4567/api/assessment/delete',{
+                assessmentId: id
+              });
+            
+        }
+        catch (err) {
+            throw new Error(`${err.response.statusText} - ${err.response.data.message}`);
+        }
+      }
 
 }

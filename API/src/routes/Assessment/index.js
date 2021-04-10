@@ -47,6 +47,30 @@ module.exports = server => {
       }
     }
   );
+
+
+  server.post(
+    `${ BASE_URL }/delete`,
+    async (req, res, next) => {
+      try {
+
+        let  {assessmentId}  = req.params;
+        assessmentId = assessmentId.assessmentId;
+
+        await AssessmentService.delete(assessmentId);
+
+        ResponseHandler(
+          res,
+          'Assessment deleted successfully',
+          null,
+          next
+        );
+      } catch (err) {
+        console.log(err)
+        next(err);
+      }
+    }
+  );
 };
 
 
