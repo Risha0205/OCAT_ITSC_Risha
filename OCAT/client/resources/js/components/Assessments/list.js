@@ -323,7 +323,7 @@ export function AssessmentList() {
                 let btnDelete = 
                 <button 
                     type="button"
-                    className="btn btn-danger"
+                    className="btn btn-outline-danger"
                     id ={assessment.id}
                     onClick={deleteAssessment.bind(this, assessment.id)}
                     >Delete</button>
